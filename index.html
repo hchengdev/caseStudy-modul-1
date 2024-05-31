@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <body>
+      <div class="player">
+        
+        <!-- Dashboard -->
+        <div class="dashboard">
+          <div class="header-contianer">
+            <img class="logo_img" src="//music.youtube.com/img/on_platform_logo_dark.svg" alt="">  
+            <div class="header__search ">
+              <div class="header__search-input-warp">
+                  <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm bài hát">
+              </div>
+              <button class="header__search-btn">
+                  <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <Button class="upload-music-btn">Upload Your Music </Button>
+            <div class="header">
+              <input type="file" id="inputFile" accept="audio/*,.mp3,.wav,.ogg">
+              <label class="label" for="inputFile">Chosse files to up load</label>
+              <div>
+                <div class="uploadInp">
+                  <label class="labelInput" for="nameNewSong">Name</label>
+                  <input type="text" class="nameNewSong" placeholder="Name song">
+                </div>
+                <div class="uploadInp">
+                  <label class="labelInput" for="singerNewSong">Singer</label>
+                  <input type="text" class="singerNewSong" placeholder="Singer song">
+                </div>
+              </div>
+              <span class="fileText"></span>
+              <button class="uploadBtn">Upload file music</button>
+              <div class="bar">
+                <div class="progresss"></div>
+              </div>
+              <div class="uploadPercentage">0%</div>
+            </div>
+          </div>
+          <div class="viewBtn">
+            <button class="ViewPlaylist">View Your Playlist</button>
+            <button class="backToHome">Back to Home</button>
+            <button class="deletePlaylist">Remove playlist</button>
+          </div>
+          <!-- Header -->
+          <header>
+            <h4>Now playing:</h4>
+            <h2>String 57th & 9th</h2>
+          </header>
+      
+          <!-- CD -->
+          <div class="cd">
+            <div class="cd-thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+            </div>
+          </div>
+      
+          <!-- Control -->
+          <div class="control">
+            <div class="btn btn-repeat">
+              <i class="fas fa-redo"></i>
+            </div>
+            <div class="btn btn-prev">
+              <i class="fas fa-step-backward"></i>
+            </div>
+            <div class="btn btn-toggle-play">
+              <i class="fas fa-pause icon-pause"></i>
+              <i class="fas fa-play icon-play"></i>
+            </div>
+            <div class="btn btn-next">
+              <i class="fas fa-step-forward"></i>
+            </div>
+            <div class="btn btn-random">
+              <i class="fas fa-random"></i>
+            </div>
+          </div>
+      
+          <input id="progress" class="progress" type="range" value="0" step="0.5" min="0" max="100">
+      
+          <audio id="audio" src=""></audio>
+        </div>
+      
+        <!-- Playlist -->
+        <div class="playlist"></div>
+      </div>
+      
+    </body>
+    
+<script src= 'https://www.gstatic.com/firebasejs/6.0.2/firebase.js'></script>
+<script src="/index.js"></script>
+
+</html>
